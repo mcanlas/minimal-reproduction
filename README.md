@@ -1,5 +1,6 @@
 ```bash
-sbt "++ 2.13.8 run" "++ 3.1.1 run"
+sbt "++ 2.13.8 breaks-in-scala-3/run" "++ 3.1.1 breaks-in-scala-3/run"
+sbt "++ 3.1.1 works-in-scala-3/run"
 ```
 
 Scala 2.13.8 allows `F[Int]` and `F[Unit]` to LUB up to `F[AnyVal]`
