@@ -7,14 +7,17 @@ object FlatMapDemo extends IOApp.Simple {
   def run: IO[Unit] =
     generically[IO]
 
-  def generically[F[_]](implicit F: Sync[F]) =
+  def generically[F[_]](implicit F: Sync[F]): F[Unit] =
     for {
       x <- F.delay(println(1))
 
-      _ <-
-        if (false)
-          F.delay(println("one"))
+      y <-
+        if (true)
+          F.delay {
+            println("one")
+            1
+          }
         else
-          F.delay(println("two"))
+          F.unit
     } yield ()
 }
