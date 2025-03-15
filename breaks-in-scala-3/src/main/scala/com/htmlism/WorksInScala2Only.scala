@@ -17,7 +17,7 @@ object WorksInScala2Only extends App {
           1
         }
       else
-        F.unit
+        F.unit // this is the line that is different
 
     // uses extension method `map` over `F[_]`
     confusingUpperBound.void
