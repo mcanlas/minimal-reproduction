@@ -5,7 +5,7 @@ import cats.syntax.all._
 
 object WorksEverywhereDemo extends App {
   val msg =
-    "this works in scala 2.13.* and 3.4.0"
+    "this works in scala 2.13.* and 3.6.0"
 
   generically[List]
 
