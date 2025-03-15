@@ -9,7 +9,7 @@ object WorksInScala2Only extends App {
 
   generically[List]
 
-  def generically[F[_]](implicit F: Monad[F]): F[Unit] = {
+  def generically[F[_]](implicit F: Applicative[F]): F[Unit] = {
     val confusingUpperBound =
       if (true)
         F.pure {
